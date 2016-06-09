@@ -31,5 +31,8 @@ module Shine
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Tell Rails to use Postgresql for storing the schema
+    config.active_record.schema_format = :sql
   end
 end
