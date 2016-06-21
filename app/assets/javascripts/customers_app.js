@@ -4,6 +4,8 @@ var CustomerSearchController = function($scope, $http) {
 
   var page = 0;
 
+  $scope.customers = [];
+
   $scope.search = function(searchTerm) {
     if (searchTerm.length < 3) {
       return;
