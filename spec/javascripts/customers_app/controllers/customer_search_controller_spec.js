@@ -75,7 +75,7 @@ describe("CustomerSearchController", function(){
     controller = null,
     httpBackend = null;
 
-    beforeEach(module("customers")):
+    beforeEach(module("customers"));
 
     beforeEach(inject(function($controller, $rootScope, $httpBackend) {
       scope = $rootScope.$new();
@@ -95,7 +95,7 @@ describe("CustomerSearchController", function(){
     it("alerts the user on an error", function() {
       scope.search("bob");
       httpBackend.flush();
-      expect(scope.customers)toEqualData([]);
+      expect(scope.customers).toEqualData([]);
       expect(window.alert).toHaveBeenCalledWith("There was a problem: 500");
     }); // "alerts the user..." ----------
   }); // "Error handling..." -------------
